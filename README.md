@@ -1,49 +1,53 @@
-# HTML 与 CSS 学习指南 / HTML & CSS Learning Guide
+# HTML & CSS Learning Guide
 
-面向大学生的前端入门讲义，基于 [VitePress](https://vitepress.dev/) 构建。
+**English** | [简体中文](./README.zh-CN.md)
 
-**在线阅读**：<https://vibe-off.github.io/claude-fable-5-html-and-css-guide/>
+A front-end starter course for college students, built with [VitePress](https://vitepress.dev/).
 
-**双语支持（i18n）**：中文为默认语言（`/`），英文版位于 `/en/`，右上角导航栏可随时切换语言。中英文内容一一对应，均为完整版本。
+**Read online**: <https://vibe-off.github.io/claude-fable-5-html-and-css-guide/>
 
-## 内容结构
+**Bilingual (i18n)**: Simplified Chinese is the default locale (`/`); the full English version lives at [`/en/`](https://vibe-off.github.io/claude-fable-5-html-and-css-guide/en/). Switch languages any time from the navbar — the two versions mirror each other page for page.
 
-- **开始之前**：导读、开发环境、网页工作原理
-- **第一部分 · HTML 基础**：文本、链接图片、列表表格、表单、语义化
-- **第二部分 · CSS 基础**：选择器、颜色单位、文字字体
-- **第三部分 · 核心概念**：盒模型、层叠优先级、文档流定位、Flexbox、Grid、响应式
-- **第四部分 · 拓展主题**：CSS 变量、动画、现代 CSS、BEM 命名、DevTools 调试、AI 协作学习、综合项目
+## Contents
 
-## 本地运行
+- **Before You Start**: how to use the guide, dev environment, how the web works
+- **Part 1 · HTML Fundamentals**: text, links & images, lists & tables, forms, semantic HTML
+- **Part 2 · CSS Fundamentals**: selectors, colors & units, text & fonts
+- **Part 3 · Key Concepts**: box model, cascade & specificity, document flow & positioning, Flexbox, Grid, responsive design
+- **Part 4 · Extended Topics**: CSS variables, animations, modern CSS, BEM naming, DevTools debugging, learning with AI, capstone projects
 
-```bash
-npm install       # 首次运行安装依赖
-npm run docs:dev  # 启动开发服务器
-```
-
-> 注意：为适配 GitHub Pages，站点配置了 `base: '/claude-fable-5-html-and-css-guide/'`，
-> 本地开发地址为 `http://localhost:5173/claude-fable-5-html-and-css-guide/`。
-
-## 构建与部署
+## Local development
 
 ```bash
-npm run docs:build    # 构建静态站点，输出到 .vitepress/dist
-npm run docs:preview  # 本地预览构建产物
+npm install       # first run: install dependencies
+npm run docs:dev  # start the dev server
 ```
 
-推送到 `main` 分支后，`.github/workflows/deploy.yml` 会自动构建并部署到 GitHub Pages。
+> Note: to work on GitHub Pages, the site sets `base: '/claude-fable-5-html-and-css-guide/'`,
+> so the local dev URL is `http://localhost:5173/claude-fable-5-html-and-css-guide/`.
 
-## 目录说明
+## Build & deploy
+
+```bash
+npm run docs:build    # build the static site into .vitepress/dist
+npm run docs:preview  # preview the built output locally
+```
+
+Every push to `main` triggers `.github/workflows/deploy.yml`, which builds the site and deploys it to GitHub Pages automatically.
+
+## Project structure
 
 ```
-├── .vitepress/config.mts  # 站点配置（双语导航、侧边栏、搜索）
-├── index.md               # 中文首页
-├── start/                 # 开始之前
-├── html/                  # HTML 基础
-├── css/                   # CSS 基础
-├── concepts/              # 核心概念
-├── advanced/              # 拓展主题
-└── en/                    # 英文版（结构与中文版一一对应）
+├── .github/workflows/deploy.yml  # GitHub Pages deployment
+├── .vitepress/config.mts         # site config (bilingual nav, sidebar, search)
+├── public/favicon.svg            # site favicon
+├── index.md                      # Chinese home page
+├── start/  html/  css/  concepts/  advanced/   # Chinese content
+└── en/                           # English version, mirroring the Chinese structure
     ├── index.md
-    ├── start/  html/  css/  concepts/  advanced/
+    └── start/  html/  css/  concepts/  advanced/
 ```
+
+## Acknowledgments
+
+This guide was built with **Claude Fable 5** (Anthropic) — from drafting the bilingual content and site configuration to deployment. Thank you, Claude Fable 5, for the contribution. 🙏

@@ -129,7 +129,12 @@ export default defineConfig({
   description: '面向大学生的前端入门教程：HTML 与 CSS 基础、核心概念与拓展主题',
   // GitHub Pages 项目站点部署在 /<repo>/ 子路径下，base 必须与之一致
   base: '/claude-fable-5-html-and-css-guide/',
-  srcExclude: ['README.md'],
+  srcExclude: ['README.md', 'README.zh-CN.md'],
+
+  head: [
+    // head 中的资源路径不会自动附加 base，需要手动带上
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/claude-fable-5-html-and-css-guide/favicon.svg' }]
+  ],
 
   themeConfig: {
     search: {
@@ -165,7 +170,7 @@ export default defineConfig({
         darkModeSwitchLabel: '外观',
         langMenuLabel: '切换语言',
         footer: {
-          message: '基础打牢，AI 加持。',
+          message: '基础打牢，AI 加持 · Built with Claude Fable 5',
           copyright: '面向大学生的前端入门课程讲义'
         }
       }
@@ -183,7 +188,7 @@ export default defineConfig({
         outline: { label: 'On this page', level: [2, 3] },
         docFooter: { prev: 'Previous', next: 'Next' },
         footer: {
-          message: 'Solid fundamentals, amplified by AI.',
+          message: 'Solid fundamentals, amplified by AI · Built with Claude Fable 5',
           copyright: 'A front-end starter course for college students'
         }
       }
