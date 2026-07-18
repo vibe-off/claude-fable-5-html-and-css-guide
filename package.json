@@ -1,0 +1,15 @@
+{
+  "name": "html-css-guide",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "面向大学生的 HTML 与 CSS 学习指南（VitePress）",
+  "scripts": {
+    "docs:dev": "vitepress dev",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview"
+  },
+  "devDependencies": {
+    "vitepress": "^1.6.4"
+  }
+}
